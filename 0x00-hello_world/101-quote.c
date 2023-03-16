@@ -1,11 +1,12 @@
-#include<stdio.h>
-#include <unistd.h>
+#include <unistd.h> 
+#include <sys/syscall.h> 
 /**
  * main - programs prints a line without puts and printf
  * Return: Always 1 (Success)
  */
-int main(void)
-{
-	write(1, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", strlen("and that piece of art is useful\" - Dora Korpar, 2015-10-19\n"));
-	return (1);
+int main(void) 
+{ 
+    const char msg[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n"; 
+    syscall(SYS_write, 1, msg, sizeof(msg)); 
+    return (1); 
 }
