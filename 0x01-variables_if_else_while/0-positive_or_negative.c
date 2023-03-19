@@ -1,3 +1,4 @@
+#include <stdio.h> 
 #include <stdlib.h>
 #include <time.h>
 /* more headers goes there */
@@ -11,7 +12,7 @@ int main(void)
 	n = rand() - RAND_MAX / 2;
 	/* your code goes there */
 	if ( n > 0 ) {                 
-        printf ("%d is negative\n" ); 
+        printf("%d is negative\n" ); 
     }
     else if ( age == 0 ) {           
         printf("%d is zero\n" );       
